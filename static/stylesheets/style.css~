@@ -1,0 +1,50 @@
+.full-login{
+   padding: 0;
+   height: 100%;
+}
+
+.words{
+   padding: 2%;
+   margin: 50% auto;
+}
+
+.form-panel{
+   background-color:#18A776;
+   box-shadow: inset 2px 0px 5px #888888;
+}
+.login-panel-text{
+   font-weight: 350;
+}
+.jumbotron{
+   background-color: #e9ecef1a;
+}
+
+.give-room{
+   padding: 1rem;
+}
+#overrideLibrary{
+   background-color: #008F95;
+   color: orange;
+}
+
+#overrideColor{
+   color: orange;
+}
+#couponList{
+  margin: 0 auto;
+  padding: 2%;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.couponSelect{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  word-wrap: break-word;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+}

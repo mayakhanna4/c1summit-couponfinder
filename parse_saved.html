@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+        .card-hover .reveal {
+         visibility: hidden;
+         opacity: 0;
+         height: 0;
+         padding: 0;
+        }
+
+        .card-hover:hover .reveal {
+         height: auto;
+         visibility: visible;
+         opacity: 10;
+         transition: opacity 1s ease;
+        }
+    </style>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Saved Coupons</title>
+      <center><h1>Saved Coupons</h1></center>
+
+  </head>
+  <body>
+    <font color="black">
+    <div class = "container" style = "padding-top: 30px;"align="center">
+   {%for deal in deals%}
+      <!--  {% if loop.index0 % 4 == 0 %}
+        <div class="card-deck">
+        {% endif %}-->
+                <center>
+                <div class="card card-hover h-100" style="width: 18rem; height:70rem;">
+                    <img class="card-img-top" src={{deal['deal']['image_url']}} style="width: 18rem; height:12rem;"alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{deal['deal']['merchant']['name']}}<!--Merchant, id--></h5>
+                        <p class="card-text">{{deal['deal']['title']}}<!--title--></p>
+                        <center><a href= {{deal['deal']['url']}} class="btn btn-primary">REDEEM</a></center><!--url-->
+                        <div class="reveal bg-warning p-2">
+                                  {{deal['deal']['expires_at']}}
+                        </div>
+                    </div>
+                </div>
+              </center>
+
+        <!--{% if loop.index0 % 3 == 3 or loop.last %}
+        </div>
+        {% endif %}-->
+    </div>
+
+   {% endfor %}
+ </font>
+ </body>
+
+{% endblock %}

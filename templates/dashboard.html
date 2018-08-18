@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+    </div>
+    <div class="col-sm-1">
+      <a href="/saved">
+      <img class="wallet" src="../static/wallet.png">
+      </a>
+    </div>
+  </div>
+</div>
+{%for name in final_results %}
+   <section>
+      <div class="container py-3">
+         <h1> {{name}} </h1>
+        <div class="card">
+          <div class="row ">
+            <div class="col-md-4">
+                  {%if loop.index == 1%}
+                <img src="http://www.stickpng.com/assets/images/58428cc1a6515b1e0ad75ab1.png" class="w-100" >
+              {%endif%}
+              {%if loop.index == 2%}
+                <img src="https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/122014/olive-garden-logo-redesign-2014_4762_0.png?itok=cm0iP5Oe" class="w-100">
+              {%endif%}
+              {%if loop.index == 3%}
+                <img src="https://prd-wret.s3-us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/target.png?itok=Tig1AWy3" class="w-100">
+              {%endif%}
+              </div>
+              <div class="col-md-8" >
+                <div id="couponList">
+                  {%for deal in final_results[name]['deals']%}
+                  <a class="coupon-card" href="{{ url_for('popup', deal_id=deal['deal']['id'], merchant_id=final_results[name]['id'] )}}">
+                  <span class="couponSelect">
+                     <div class="card">
+                       <div class="card-body">
+                         <h5 class="card-title">{{deal['deal']['title']}}</h5>
+                         <p class="card-text">{{deal['deal']['discount_percentage'] * 100}}% off</p>
+                         <div class="card-footer">
+                           <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                     </div>
+                  </div>
+                  </span>
+                  </a>
+                   {% endfor %}
+               </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+{% endfor %}
+
+{% endblock %}

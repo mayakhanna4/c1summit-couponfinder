@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div>
+  <a href="/dashboard">
+    <button type="button" class="close jumbo-close" aria-label="Close"
+            style="padding: 2%;">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </a>
+<div class="jumbotron" style="color:black;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-auto">
+        <img class="card-img-top" src={{deal['image_url']}} style="width: 18rem; height:12rem;"alt="Card image cap">
+      </div>
+      <div class="col">
+        <h2>{{ deal['title'] }}</h2>
+        <div id="desc">{{ deal['description'] }}</div>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <h3  class="mx-auto">
+        Potential Savings
+      </h3>
+    </div>
+    <div class="row">
+      <div class="progress-pie-chart" class="gt-50" data-percent="100"><!--Pie Chart -->
+        <div class="ppc-progress">
+          <div class="ppc-progress-fill"></div>
+        </div>
+        <div class="ppc-percents">
+          <div class="pcc-percents-wrapper">
+            <span>{{savings}}</span>
+          </div>
+        </div>
+      </div><!--End Chart -->
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <div class="row">
+    <div class="col">
+      <a href="/save/{{deal['id']}}">
+        <button id="save-coupon" type="button" class="btn btn-primary btn-lg btn-block">Save</button>
+      </a>
+    </div>
+    <div class="col">
+      <a target="_new" href="{{deal['url']}}">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Redeem</button>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+ $(function(){
+     var $ppc = $('.progress-pie-chart'),
+         percent = parseInt($ppc.data('percent')),
+         deg = 360*percent/100;
+     if (percent > 50) {
+         $ppc.addClass('gt-50');
+     }
+     $('.ppc-progress-fill').css('transform','rotate('+ deg +'deg)');
+ });
+
+ $("save-coupon").click( () => {
+     saved()
+ })
+</script>
+</div>
+</div>
+{% endblock %}

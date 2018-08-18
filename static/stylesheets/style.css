@@ -1,0 +1,149 @@
+.full-login{
+   padding: 0;
+   height: 100%;
+}
+
+.words{
+   padding: 2%;
+   margin: 50% auto;
+}
+
+.form-panel{
+   background-color:#18A776;
+   box-shadow: inset 2px 0px 5px #888888;
+}
+.login-panel-text{
+   font-weight: 350;
+}
+.jumbotron{
+   background-color: #e9ecef1a;
+}
+
+.give-room{
+   padding: 1rem;
+}
+
+#overrideLibrary{
+   background-color: #008F95;
+   color: orange;
+}
+
+#overrideColor{
+   color: orange;
+}
+#couponList{
+  margin: 0 auto;
+  padding: 2%;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.couponSelect{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  word-wrap: break-word;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.jumbo-close {
+    padding: 20%;
+}
+
+.coupon-card {
+    text-decoration: none;
+    color: orange;
+}
+
+    color: red;
+}
+
+/* visited link */
+.coupon-card:visited {
+    color: orange;
+}
+
+/* mouse over link */
+.coupon-card:hover {
+    color: orange;
+}
+
+/* selected link */
+.coupon-card:active {
+    color: orange;
+}
+/* Pie Chart */
+.progress-pie-chart {
+  width:200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  position: relative;
+}
+.progress-pie-chart.gt-50 {
+  background-color: #81CE97;
+}
+
+.ppc-progress {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  clip: rect(0, 200px, 200px, 100px);
+}
+.ppc-progress .ppc-progress-fill {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  clip: rect(0, 100px, 200px, 0);
+  background: #81CE97;
+  transform: rotate(60deg);
+}
+.gt-50 .ppc-progress {
+  clip: rect(0, 100px, 200px, 0);
+}
+.gt-50 .ppc-progress .ppc-progress-fill {
+  clip: rect(0, 200px, 200px, 100px);
+  background: #E5E5E5;
+}
+
+.ppc-percents {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 173.91304px/2);
+  top: calc(50% - 173.91304px/2);
+  width: 173.91304px;
+  height: 173.91304px;
+  background: #fff;
+  text-align: center;
+  display: table;
+}
+.ppc-percents span {
+  display: block;
+  font-size: 2.6em;
+  font-weight: bold;
+  color: #81CE97;
+}
+
+.pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.progress-pie-chart {
+  margin: 50px auto 0;
+}
+
+.wallet{
+   padding-top: 50%;
+}

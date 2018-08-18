@@ -1,0 +1,17 @@
+#couponList{
+  margin: 0 auto;
+  padding: 2%;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.couponSelect{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 15%;
+  padding: 2%;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+}
